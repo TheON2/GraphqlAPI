@@ -22,7 +22,7 @@ const typeDefs = gql`
     type Tweet {
         id:ID!
         text:String!
-        author : User!
+        author : User
     }
 
     type Query {
@@ -40,15 +40,18 @@ const typeDefs = gql`
 
 const resolvers = {
   Query : {
-    tweet(){
-      console.log("I`m called");
-      return null;
+    allTweets(){
+      return tweets;
     },
-    ping(){
-      return "pong";
-    }
-  }
-}
+    // tweet(root,args){
+    //   console.log(args);
+    //   return null;
+    // },
+    tweet(root , {id}){
+      return tweets.find((tweet)=> tweet.id === id);
+    },
+  },
+};
 
 const server = new ApolloServer({typeDefs , resolvers});
 
