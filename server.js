@@ -50,7 +50,7 @@ const resolvers = {
       postTweet(_,{ text , userId}){
         const newTweet = {
           id : tweets.length +1 ,
-          text,
+          text ,
         };
         tweets.push(newTweet);
         return newTweet;
