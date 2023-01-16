@@ -43,9 +43,9 @@ const resolvers = {
     allTweets(){
       return tweets;
     },
-    tweet(root , {id}){
-      return tweets.find((tweet)=> tweet.id === id);
-    },
+    // tweet(root , {id}){
+    //   return tweets.find((tweet)=> tweet.id === id);
+    // },
     Mutation : {
       postTweet(_,{ text , userId}){
         const newTweet = {
