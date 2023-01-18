@@ -11,13 +11,13 @@ let tweets = [
   },
 ];
 
-let users = [
-  {
-    id:"1",
-    firstName:"nico",
-    lastName: "las"
-  }
-]
+// let users = [
+//   {
+//     id:"1",
+//     firstName:"nico",
+//     lastName: "las"
+//   }
+// ]
 
 const typeDefs = gql`
     type User{
